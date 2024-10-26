@@ -6,6 +6,7 @@ const password = process.env.DB_PASSWORD;
 const database = process.env.DB_NAME;
 const host = process.env.DB_HOST;
 const port = process.env.DB_PORT;
+const dialect = process.env.dialect || 'mysql';
 
 module.exports = {
   local: {
@@ -14,7 +15,7 @@ module.exports = {
     database,
     host,
     port,
-    dialect: "mysql",
+    dialect
   },
   development: {
     username,
@@ -22,7 +23,7 @@ module.exports = {
     database,
     host,
     port,
-    dialect: "mysql",
+    dialect
   },
   production: {
     username,
@@ -30,7 +31,7 @@ module.exports = {
     database,
     host,
     port,
-    dialect: "mysql",
+    dialect
   },
   test: {
     username,
@@ -38,6 +39,6 @@ module.exports = {
     database,
     host,
     port,
-    dialect: "mysql",
+    dialect
   },
 };

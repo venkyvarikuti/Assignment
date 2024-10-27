@@ -6,15 +6,15 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8000:8000"  # Map container port to host
+      - "3000:3000"  # Map container port to host
     environment:
       - DB_HOST=mysql
-      - DB_PORT=3330
+      - DB_PORT=3306
       - DB_NAME=VE3
       - DB_USER=host
       - DB_PASSWORD=1234
       - JWT_SECRET=mysecret
-      - PORT=8000
+      - PORT=3000
     depends_on:
       - mysql
 
